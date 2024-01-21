@@ -45,7 +45,7 @@ def weighted_round_robin(rights: list[float], valuations: list[list[float]], y: 
     # fill items
     for i in range(len(valuations[0])):
         items.append(i)
-        # fill values and put 1 item for each person so you won't divide by 0
+        # fill values and put 1 item for each person so you won't divide by 0 if y=0(even though in the course it says to start with 0)
     for r in rights:
         people.append(((r / 1 + y), person))
         people_amount.append(1)
